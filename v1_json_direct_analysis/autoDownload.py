@@ -14,7 +14,7 @@ for t in dt:
         print(downloadURL)        
         response = requests.get(downloadURL)
 
-        with open("ipl_json.zip", "wb") as f:
+        with open("data\\raw\\ipl_json.zip", "wb") as f:
             f.write(response.content)
 
         print("Download completed")

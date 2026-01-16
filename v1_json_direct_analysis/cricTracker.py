@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-SRC = Path("ipl_json_files")
+SRC = Path("data\\raw\\ipl_json_files")
 MATCHES = []
 for json_file in SRC.glob("*.json"):
     with open(json_file, "r") as f:
