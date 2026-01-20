@@ -119,7 +119,7 @@ def matches_per_season():
     plt.ylabel("No. of Matches",fontweight='bold')
     plt.xticks(np.arange(min(matches_df["Season"]), max(matches_df["Season"]) +1, 1))
     plt.title("Matches per Season",fontweight='bold')
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysismatches_per_season.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matches_per_season.png")
     plt.show()
 
 def result_type():
@@ -138,7 +138,7 @@ def result_type():
     plt.xlabel("Result type",fontweight='bold')
     plt.ylabel("No. of Matches",fontweight='bold')
     plt.title("Matches for eash result type",fontweight='bold')
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysismatches_by_result_type.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matches_by_result_type.png")
     plt.show()
 
 def result_counts():
@@ -155,7 +155,7 @@ def result_counts():
     plt.ylabel("Number of Matches")
     plt.title("Match Result Distribution per Season")
     plt.legend(title="Result Type")
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysisseason_wise_match_results.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\season_wise_match_results.png")
     plt.show()
 
 def no_of_venues():
@@ -187,7 +187,7 @@ def unique_venues():
     plt.ylabel("Unique Venues", fontweight="bold")
     plt.title("Unique Venues per Season", fontweight="bold")
     plt.xticks(np.arange(min(unique_venues_per_season["Season"]),max(unique_venues_per_season["Season"])+1,1))
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysisunique_venues_per_season.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\unique_venues_per_season.png")
     plt.show()
 def matches_played_per_team():
     df = (
@@ -204,7 +204,7 @@ def matches_played_per_team():
     plt.xlabel("Total matches played", fontweight="bold")
     plt.ylabel("Teams", fontweight="bold")
     plt.title("Matches played by each team", fontweight="bold")
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysismatches_played_by_teams.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matches_played_by_teams.png")
     plt.show()
 
 def wins_per_team():
@@ -222,7 +222,7 @@ def wins_per_team():
     plt.xlabel("Total matches won", fontweight="bold")
     plt.ylabel("Teams", fontweight="bold")
     plt.title("Matches won by each team", fontweight="bold")
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysismatches_won_by_teams.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matches_won_by_teams.png")
     plt.show()
 
 def matches_played_vs_won_per_team():
@@ -262,7 +262,7 @@ def matches_played_vs_won_per_team():
 
     plt.tight_layout()
     plt.savefig(
-        "v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysismatches_played_vs_won_by_teams.png"
+        "v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matches_played_vs_won_by_teams.png"
     )
     plt.show()
  
@@ -291,7 +291,7 @@ def win_percentage_per_team():
     plt.xlabel("Win Percentage", fontweight="bold")
     plt.ylabel("Teams", fontweight="bold")
     plt.title("Win percentage of each team", fontweight="bold")
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysiswin_percentage_by_teams.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\win_percentage_by_teams.png")
     plt.show()
 
 def team_wins_across_seasons():
@@ -323,7 +323,7 @@ def team_wins_across_seasons():
     plt.legend(bbox_to_anchor=(1, 0.75))
     plt.grid()
     plt.tight_layout()
-    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\matchAnalysisteam_wins_across_seasons.png")
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\team_wins_across_seasons.png")
     plt.show()
 
 def seasonwise_win_type_distribution():
