@@ -508,6 +508,30 @@ def win_type_per_venue():
     plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\win_type_per_venue.png")
     plt.show()
 
+def win_type_per_team():
+    df = (
+        matches
+        .dropna(subset=["Winner", "Win_Type"])
+        .groupby(["Winner", "Win_Type"])
+        .size()
+        .unstack(fill_value=0)
+    )
+    df["Total_wins"]=df["runs"]+df["wickets"]
+    df=df.sort_values("Total_wins",ascending=False).head(10)
+    print(df)
+
+    plt.figure(figsize=(8,6))
+    x=np.arange(len(df))
+    width=0.4
+    plt.bar(x-width/2,df["runs"],width,label="Won by defending")
+    plt.bar(x+width/2,df["wickets"],width,label="Won by chasing")
+    plt.xlabel("Teams")
+    plt.ylabel("Number of wins")
+    plt.legend()
+    plt.xticks(x, df.index, rotation=45)
+    plt.tight_layout()
+    plt.savefig("v2_dataframe_based_analysis\\Graphs\\matchAnalysis\\win_type_per_team.png")
+    plt.show()
 matches_per_season()
 result_type()
 result_counts()
@@ -524,4 +548,5 @@ matches_per_venue()
 wins_per_venue()
 stacked_bar_venue_vs_team()
 win_type_per_venue()
+win_type_per_team()
 
