@@ -10,7 +10,7 @@ This repository contains two versions of the implementation to show the evolutio
 ---
 
 ## Project Structure
-
+```
 IPL-Data-Analysis-System-using-Python
 │
 ├── data
@@ -36,7 +36,7 @@ IPL-Data-Analysis-System-using-Python
 │   └── playerDF.py
 │
 └── README.md
-
+```
 
 ## Versions Overview
 
